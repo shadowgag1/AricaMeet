@@ -1,0 +1,223 @@
+PHASE 1 — Base App + UI Theme + Dashboard
+
+Goal: Build the foundation + theme + meeting-code screen.
+
+What Cursor should build
+
+Initialize a minimal Next.js + Tailwind project (Cursor will choose configs automatically).
+
+Create a clean premium theme (Safe.security style: deep navy → purple → neon accent).
+
+Add light/dark toggle (in-memory state only).
+
+Build the Dashboard page with:
+
+Meeting code input
+
+Start Meeting / Join Meeting buttons
+
+Simple client-side cooldown/rate limiting (5 attempts/min + 5 sec cooldown)
+
+Output expected
+
+Dashboard works end-to-end (navigate to /meeting/{code}).
+
+Theme + colors + typography applied.
+
+No backend yet.
+
+PHASE 2 — Minimal WebRTC Signaling (No Logs, No Storage)
+
+Goal: Create the smallest possible signaling layer to exchange WebRTC offers/answers.
+
+What Cursor should build
+
+A temporary, in-memory WebSocket signaling layer:
+
+No database
+
+No logging
+
+No persistence
+
+Client hook for:
+
+Join meeting code room
+
+Relay offer/answer/ICE
+
+Auto-clean memory when room empties
+
+Output expected
+
+Two browser tabs with same code can connect and create WebRTC handshake.
+
+No logs, no saved messages, no file writes.
+
+PHASE 3 — P2P Audio/Video + Controls
+
+Goal: Fully functioning audio/video between peers.
+
+What Cursor should build
+
+WebRTC AV streams:
+
+Camera on/off
+
+Mic mute/unmute
+
+Local preview + remote grid
+
+Simple AV controls bar
+
+Auto-reconnect if peer refreshes
+
+Output expected
+
+Two peers can see/hear each other in real-time.
+
+Basic controls functional.
+
+PHASE 4 — Screen Share + Fullscreen
+
+Goal: Add advanced AV features.
+
+What Cursor should build
+
+WebRTC screen-sharing (tab/app/window)
+
+Replace track in peer stream
+
+Stop sharing button
+
+Fullscreen on video tile
+
+Output expected
+
+Screen share works P2P.
+
+Fullscreen toggle behaves smoothly.
+
+PHASE 5 — Chat (P2P DataChannel)
+
+Goal: Add real-time text chat with zero persistence.
+
+What Cursor should build
+
+WebRTC DataChannel for chat
+
+Minimal bubble-style chat window
+
+In-memory only
+
+Auto-delete messages when leaving meeting
+
+Basic typing indicator (optional)
+
+Output expected
+
+Text chat synced between peers with no storage.
+
+PHASE 6 — File Sharing (P2P DataChannel)
+
+Goal: Support file transfer without touching any server.
+
+What Cursor should build
+
+DataChannel-based file sending:
+
+Chunk files
+
+Stream to peer
+
+Show transfer progress
+
+Auto-delete buffer after transfer completes or user leaves
+
+No caching, no logging, no saving anywhere
+
+Output expected
+
+Peers can send files P2P up to large sizes.
+
+Zero persistence after transfer.
+
+PHASE 7 — Shared Whiteboard + Permission System
+
+Goal: Add collaborative whiteboard with host approval.
+
+What Cursor should build
+
+Simple canvas-based whiteboard:
+
+Draw
+
+Erase
+
+Undo
+
+Clear (host-only)
+
+Sync whiteboard events via DataChannel
+
+Host = first user in room
+
+Permission flow:
+
+Non-host sees Request Access
+
+Host gets popup: Allow / Deny
+
+Permission broadcasts to all peers
+
+Output expected
+
+Real-time collaborative whiteboard
+
+Fully P2P
+
+Host permission system functioning
+
+PHASE 8 — Cleanup Logic + UX Polish
+
+Goal: Make the prototype stable and smooth.
+
+What Cursor should build
+
+When all peers leave:
+
+Close all connections
+
+Clear all memory
+
+Destroy local buffers
+
+Add small UI refinements:
+
+Animations
+
+Better layout
+
+Color polish
+
+Loading states
+
+Error toasts
+
+Output expected
+
+A smooth, visually premium, zero-storage, P2P meeting prototype with:
+
+A/V
+
+Screen share
+
+Fullscreen
+
+Chat
+
+File sharing
+
+Whiteboard with permissions
+
+Light/dark mode
