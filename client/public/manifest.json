@@ -1,0 +1,27 @@
+{
+  "name": "AricaMeet - Secure P2P Video Conferencing",
+  "short_name": "AricaMeet",
+  "description": "Zero-trace peer-to-peer video conferencing for cybersecurity professionals",
+  "start_url": "/",
+  "display": "standalone",
+  "orientation": "any",
+  "background_color": "#0a0e1a",
+  "theme_color": "#0a0e1a",
+  "icons": [
+    {
+      "src": "/favicon.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/favicon.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "categories": ["productivity", "business", "security"],
+  "screenshots": [],
+  "prefer_related_applications": false
+}
