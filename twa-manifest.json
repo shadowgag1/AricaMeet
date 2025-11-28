@@ -1,0 +1,45 @@
+{
+  "packageId": "com.aricameet.app",
+  "host": "YOUR_DEPLOYED_URL_HERE",
+  "name": "AricaMeet",
+  "launcherName": "AricaMeet",
+  "display": "standalone",
+  "themeColor": "#0a0e1a",
+  "navigationColor": "#0a0e1a",
+  "navigationColorDark": "#0a0e1a",
+  "navigationDividerColor": "#141b2d",
+  "navigationDividerColorDark": "#141b2d",
+  "backgroundColor": "#0a0e1a",
+  "enableNotifications": true,
+  "startUrl": "/",
+  "iconUrl": "https://YOUR_DEPLOYED_URL_HERE/icon-512.png",
+  "maskableIconUrl": "https://YOUR_DEPLOYED_URL_HERE/icon-512.png",
+  "splashScreenFadeOutDuration": 300,
+  "signingKey": {
+    "path": "./aricameet-key.keystore",
+    "alias": "aricameet"
+  },
+  "appVersionCode": 1,
+  "appVersionName": "1.0.0",
+  "shortcuts": [],
+  "generatorApp": "bubblewrap-cli",
+  "webManifestUrl": "https://YOUR_DEPLOYED_URL_HERE/manifest.json",
+  "fallbackType": "customtabs",
+  "features": {
+    "locationDelegation": {
+      "enabled": false
+    },
+    "playBilling": {
+      "enabled": false
+    }
+  },
+  "alphaDependencies": {
+    "enabled": false
+  },
+  "enableSiteSettingsShortcut": false,
+  "isChromeOSOnly": false,
+  "isMetaQuest": false,
+  "fullScopeUrl": "https://YOUR_DEPLOYED_URL_HERE/",
+  "minSdkVersion": 21,
+  "orientation": "any"
+}
